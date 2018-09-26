@@ -1,7 +1,6 @@
 function fetchIssues () {
     var issues = JSON.parse(localStorage.getItem('issues'));
     var issuesList = $('#issuesList');
-    
     issuesList.html('');
     
     issues.forEach(ticket => {
@@ -34,27 +33,24 @@ function saveIssue(e) {
       assignedTo: issueAssignedTo,
       status: issueStatus
     }
-    
 
     const issues = JSON.parse(localStorage.getItem('issues')) || [];
     issues.push(issue);
     localStorage.setItem('issues', JSON.stringify(issues));
-
-    
     document.getElementById('issueInputForm').reset();
    
     fetchIssues();
-    
+
     e.preventDefault(); 
 }
 
 function setStatus (id, action) {
     var issues = JSON.parse(localStorage.getItem('issues'));
     const status = action == 'Close' ? 'Closed' : 'Open';
-    issues.some(ticket => 
-        (ticket.id != id) ? false : ticket.status = status, true
-    );
-      
+    
+    issues.find(ticket => 
+        (ticket.id == id) ? ticket.status = status : false
+    );  
     localStorage.setItem('issues', JSON.stringify(issues));
     
     fetchIssues();
@@ -62,12 +58,9 @@ function setStatus (id, action) {
 
 function deleteIssue (id) {
     var issues = JSON.parse(localStorage.getItem('issues'));
-    
     let deleted = issues.findIndex(ticket=> ticket.id == id);
+
     issues.splice(deleted, 1);
-    
-    
-    
     localStorage.setItem('issues', JSON.stringify(issues));
     
     fetchIssues();

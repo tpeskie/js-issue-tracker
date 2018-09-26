@@ -1,4 +1,4 @@
-html, body{background-color: hsl(0, 0%, 97%)}
+html, body{background-color: hsl(0, 0%, 55%)}
 
 h1 { 
     width: max-content; 
@@ -8,3 +8,8 @@ h1 {
 .jumbotron {background-color: hsl(355, 70%, 80%) !important}
 
 input, select {background-color: hsl(0, 100%, 90%) !important}
+
+#issuesList .well {
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 75%);
+}
