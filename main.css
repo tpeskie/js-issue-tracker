@@ -1,0 +1,10 @@
+html, body{background-color: hsl(0, 0%, 97%)}
+
+h1 { 
+    width: max-content; 
+    margin: auto
+}
+
+.jumbotron {background-color: hsl(355, 70%, 80%) !important}
+
+input, select {background-color: hsl(0, 100%, 90%) !important}
