@@ -1,8 +1,9 @@
-html, body{background-color: hsl(0, 0%, 55%)}
+html, body{background-color: hsl(0, 0%, 28%)}
 
 h1 { 
     width: max-content; 
-    margin: auto
+    margin: auto;
+    color: hsl(199, 100%, 78%)
 }
 
 .jumbotron {background-color: hsl(355, 70%, 80%) !important}

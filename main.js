@@ -11,8 +11,8 @@ function fetchIssues () {
                             <h3> ${ticket.description} </h3>
                             <p><span class="glyphicon glyphicon-time"></span> ${ticket.severity} 
                             <span class="glyphicon glyphicon-user"></span> ${ticket.assignedTo} </p>
-                            <a href="#" class="btn btn-warning" onclick="setStatus('${ticket.id}', '${action}')">${action}</a>
-                            <a href="#" class="btn btn-danger" onclick="deleteIssue('${ticket.id}')">Delete</a>
+                            <a class="btn btn-warning" onclick="setStatus('${ticket.id}', '${action}')">${action}</a>
+                            <a class="btn btn-danger" onclick="deleteIssue('${ticket.id}')">Delete</a>
                             </div>`
         );
     })
