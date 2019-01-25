@@ -15,7 +15,7 @@ function fetchIssues () {
                             <a class="btn btn-danger" onclick="deleteIssue('${ticket.id}')">Delete</a>
                             </div>`
         );
-    })
+    });
 }
 
 $('#issueInputForm').on('submit', saveIssue);
@@ -32,7 +32,7 @@ function saveIssue(e) {
       severity: issueSeverity,
       assignedTo: issueAssignedTo,
       status: issueStatus
-    }
+    };
 
     const issues = JSON.parse(localStorage.getItem('issues')) || [];
     issues.push(issue);
